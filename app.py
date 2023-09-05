@@ -18,6 +18,9 @@ def main():
 
     @st.cache(persist=True)     #its helps in not open continously when after a change is occured in data set
     def load_data():
+
+        #to add your own file just change the data variable path
+
         data = pd.read_csv("D:\programming\Machine learning web app using streamlit\mushrooms.csv")
         label = LabelEncoder()
         for col in data.columns:
